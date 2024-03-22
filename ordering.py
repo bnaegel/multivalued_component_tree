@@ -12,12 +12,19 @@ class Ordering:
 	# OUTPUT : none
 	# PRECONDITION : none
 	# POSTCONDITION : none
-	def __init__(self):
+	def __init__(self, label_root,labels):
 		
-		self.root=None
+		self.root=label_root
+		self.labels=labels
 		self.values = None	# values
-		self.parent=None	# parent array 
 		self.order = None	# contains all ordering relations on labels in the form of an adjacency matrix
+
+		# init parent array
+		self.parent = np.full(len(self.labels),0)
+
+		for i in labels:
+			self.parent[i.label]=i.father.label
+
 
 	def __repr__(self):
 		res= "Values : " + str(self.values) + "\nOrder : " + str(self.order)
@@ -39,10 +46,6 @@ class Ordering:
 			return True
 		else:
 			return False
-
-
-
-
 
 	# FUNCTION : prec_of_label
 	# DESC : Finds the predecessor of a given label
@@ -99,7 +102,9 @@ class Ordering:
 
 		return a
 
-	# FUNCTION : trans_closure
+
+
+	# FUNCTION 	: trans_closure
 	# DESC : computes the transitive closure of the order relation on labels
 	# INPUT :
 	#	- label_root : label used for root of tree 
@@ -107,28 +112,42 @@ class Ordering:
 	# PRECONDITION :
 	#	- label_root should be a Label_component 
 	# POSTCONDITION : none
+	# def trans_closure(self):
+		
+	# 	# number of labels
+	# 	nb_labels=self.parent.size
+
+	# 	# adjacency matrix order
+	# 	self.order = np.zeros([nb_labels,nb_labels], np.int32)
+		
+	# 	label_root=nb_labels-1
+	# 	for p in range(len(self.parent)) :
+
+	# 		self.order[label_root][p]=1
+	# 		self.order[p][label_root]=-1
+
+	# 		par=p
+	# 		# propagate through the root
+		
+	# 		while self.parent[par] != par:
+	# 			par=self.parent[par]
+	# 			self.order[par][p]=1
+	# 			self.order[p][par]=-1				
+
 	def trans_closure(self):
-		
-		# number of labels
-		nb_labels=self.parent.size
 
-		# adjacency matrix order
-		self.order = np.zeros([nb_labels,nb_labels], np.int32)
-		
-		label_root=nb_labels-1
-		for p in range(len(self.parent)) :
+		# transitive closure of the label graph
+		# each label is identified with its index
+		self.order = []
+		self.order = [[0] * len(self.labels) for i in range(0, len(self.labels))]
 
-			self.order[label_root][p]=1
-			self.order[p][label_root]=-1
+		self.compute_succ(self.root)
 
-			par=p
-			# propagate through the root
-		
-			while self.parent[par] != par:
-				par=self.parent[par]
-				self.order[par][p]=1
-				self.order[p][par]=-1				
-
+		for l in self.labels:
+			for c in l.succ:
+				# print l.index,' ',c.index
+				self.order[l.label][c.label] = 1
+				self.order[c.label][l.label] = -1
 
 
 

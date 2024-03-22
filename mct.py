@@ -59,7 +59,7 @@ class MCT:
         self.processed = [False] * self.nb_pixels
         self.status = [self.ACTIVE] * self.nb_pixels
 
-        for l in range(len(ordering.parent)):
+        for l in range(len(ordering.labels)):
             self.node_at_level[l] = False
             self.number_nodes[l] = 0
             self.hq[l] = []

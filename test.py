@@ -472,4 +472,78 @@ def test2_rgb():
     cv2.destroyAllWindows()
 
 
-test2_rgb()
+def test_fig1():
+
+    # define labels
+    a=Node_label('a')
+    b=Node_label('b')
+    c=Node_label('c')
+    d=Node_label('d')
+    e=Node_label('e')
+    f=Node_label('f')
+    g=Node_label('g')
+    h=Node_label('h')
+    i=Node_label('i')
+
+    labels=[]
+    labels.append(a)
+    labels.append(b)
+    labels.append(c)
+    labels.append(d)
+    labels.append(e)
+    labels.append(f)
+    labels.append(g)
+    labels.append(h)
+    labels.append(i)
+
+    a.add_child(b)
+    a.add_child(c)
+    b.add_child(d)
+    b.add_child(e)
+    b.add_child(f)
+    c.add_child(g)
+    g.add_child(h)
+    g.add_child(i)
+
+    # compute ordering 
+    ordering=Ordering(a, labels)
+
+    # compute transitive closure
+    ordering.trans_closure()
+
+    # check ordering
+    print("Ordering:")
+
+    for i in labels:
+        for j in labels:
+            print(i, ' < ', j, ': ', ordering.ilt(i.label, j.label))
+
+
+    # write label graph in dot format
+    gg = pydot.Dot(graph_type='digraph')
+    write_graph(gg, a)
+    gg.write("labels_fig1.dot")
+
+    # define image
+
+    F=np.array([[h.label, h.label, h.label, a.label, h.label, h.label],
+               [e.label, h.label, a.label, a.label, i.label, h.label],
+               [e.label, e.label, e.label, i.label, i.label, i.label],
+               [d.label, d.label, a.label, b.label, i.label, c.label],
+               [a.label, a.label, d.label, d.label, c.label, c.label],
+               [b.label, b.label, b.label, b.label, d.label, c.label]], 
+               dtype='uint8')
+    
+    adj = c4
+
+    # build MCT
+    mct = MCT()
+    root = mct.build(F, a.label, ordering, adj)
+
+    # write MCT in dot format
+    gg = pydot.Dot(graph_type='digraph')
+    write_graph(gg, root)
+    gg.write("mct_fig1.dot")
+
+
+test_fig1()

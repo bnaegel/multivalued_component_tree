@@ -6,13 +6,15 @@ class Node_label:
         Node_label.label+=1
         self.value = value
         self.childs = []
-        self.father = -1
+        self.father = self
+        self.succ = []		# all successors
 		
     def __repr__(self):
-        return 'l=%d v=%d' % (self.label, self.value)
+        return 'l=%d v=%s' % (self.label, self.value)
 
     def add_child(self, node):
         self.childs.append(node)
+        node.father=self
 
 class Node_component:
     label=0
