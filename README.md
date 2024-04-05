@@ -1,6 +1,6 @@
 # Multivalued component-trees
 
-This repository contains the code for the paper "New algorithms for multivalued component-trees" by Nicolas Passat, Romain Perrin, Jimmy Francy Randrianasoa, Camille Kurtz, and Benoît Naegel. The paper is available at ...
+This repository contains the code for the paper *New algorithms for multivalued component-trees* by Nicolas Passat, Romain Perrin, Jimmy Francy Randrianasoa, Camille Kurtz, and Benoît Naegel. 
 
 ## Installation
 
