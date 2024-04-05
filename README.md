@@ -22,16 +22,17 @@ dot -Tpdf output.dot -o output.pdf
 which produces a graphical representation of the tree in pdf format.
 or using any tiers software that can read dot files.
 
-<img src="Fig1.png"  />
+<img src="figs/Fig1.png"  />
 
 (a) the hierarchical ordering of labels, (b) the adjacency graph, and (c) the input image F
 
-<img src="Fig2.png"  />
+<img src="figs/Fig2.png"  />
 (a) the threshold sets of F, (b) the multivalued component-tree of F
 
-<img src="mct_fig1.png"  />
+<img src="figs/mct_fig1.png"  />
 The produced MCT using the proposed algorithm.
 Each node is described by:
+
 - l: the unique identifier of the node
 - a: the area (number of pixels) of the node
 - g: the value of the  node
