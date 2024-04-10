@@ -82,19 +82,19 @@ Each node is described by:
 - a: the area (number of pixels) of the node
 - g: the value of the  node, represented by an integer index based on the following mapping :
     -  &nbsp; 0: &nbsp; 9
-    -  &nbsp; 1: &nbsp; 0
-    -  &nbsp; 2: &nbsp; 4
+    -  &nbsp; 1: &nbsp; 0 &nbsp;&nbsp;&nbsp;(as blue)
+    -  &nbsp; 2: &nbsp; 4 &nbsp;&nbsp;&nbsp;(as gray)
     -  &nbsp; 3: 10
-    -  &nbsp; 4: &nbsp; 5
-    -  &nbsp; 5: &nbsp; 8
+    -  &nbsp; 4: &nbsp; 5 &nbsp;&nbsp;&nbsp;(as cyan)
+    -  &nbsp; 5: &nbsp; 8 &nbsp;&nbsp;&nbsp;(as yellow)
     -  &nbsp; 6: 11
     -  &nbsp; 7: 12
-    -  &nbsp; 8: &nbsp; 2
+    -  &nbsp; 8: &nbsp; 2 &nbsp;&nbsp;&nbsp;(as green)
     -  &nbsp; 9: 13
-    - 10: &nbsp; 3
+    - 10: &nbsp; 3 &nbsp;&nbsp;&nbsp;(as fuchsia)
     - 11: 14
-    - 12: &nbsp; 1
+    - 12: &nbsp; 1 &nbsp;&nbsp;&nbsp;(as light blue)
     - 13: 15
-    - 14: &nbsp; 7
+    - 14: &nbsp; 7 &nbsp;&nbsp;&nbsp;(as orange)
     - 15: 16
-    - 16: &nbsp; 6
+    - 16: &nbsp; 6 &nbsp;&nbsp;&nbsp;(as red)
