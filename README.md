@@ -21,25 +21,25 @@ The command :
 ```bash
 python3 mct_fig1.py 
 ```
-will run the code on the image of depicted on <b>Figure 1</b> of the paper and output the multivalued component-tree in dot format in the file `mct_fig1.dot`.
+will run the code on the image depicted on <b>Figure 1</b> of the paper and output the multivalued component-tree in dot format in the file `mct_fig1.dot`.
 The tree can be visualized using for example the command:
 ```bash
 dot -Tpdf mct_fig1.dot -o mct_fig1.pdf
 ```
-which produces a graphical representation of the tree in pdf format.
-or using any tiers software that can read dot files.
+which produces a graphical representation of the tree in pdf format or using any tiers software that can read dot files.
 
 <img src="figs/Fig1.png"  />
 
-(a) the hierarchical ordering of labels, (b) the adjacency graph, and (c) the input image F
+<b>(a) the hierarchical ordering of labels, (b) the adjacency graph, and (c) the input image F</b>
 
 <img src="figs/Fig2.png"  />
 
-(a) the threshold sets of F, (b) the multivalued component-tree of F
+<b>(a) the threshold sets of F, (b) the multivalued component-tree of F</b>
 
 <img src="figs/mct_fig1.png"  />
 
-The produced MCT using the proposed algorithm.
+<b>The produced MCT using the proposed algorithm.</b>
+
 Each node is described by:
 
 - l: the unique identifier of the node
@@ -63,7 +63,7 @@ The command :
 ```bash
 python3 mct_fig6.py 
 ```
-will run the code on the image of depicted on <b>Figure 6</b> of the paper and output the multivalued component-tree in dot format in the file `mct_fig6.dot`.
+will run the code on the image depicted on <b>Figure 6</b> of the paper and output the multivalued component-tree in dot format in the file `mct_fig6.dot`.
 
 This example requires a hierarchical order on an enriched set of values. The `bpt_labels_fig6.dot` has been built as described in the <b>Section 5.2: Ordering the enriched value set</b> of the paper. The code is available at <a href="https://github.com/jimmy-randrianasoa/Example_BinaryPartitionTree_ValueSet.git" target="_blank">Example_BinaryPartitionTree_ValueSet</a>.
 
@@ -71,16 +71,16 @@ The MCT can be visualized using for example the command:
 ```bash
 dot -Tpdf mct_fig6.dot -o mct_fig6.pdf
 ```
-which produces a graphical representation of the tree in pdf format.
-or using any tiers software that can read dot files.
+which produces a graphical representation of the tree in pdf format or using any tiers software that can read dot files.
 
 <img src="figs/Fig6.png"  />
 
-(a) Top: the image. Bottom: set of 9 values. (b) Top: the co-occurrence matrix of the image. Bottom: the set is endowed with an adjacency. (c) Binary partition tree as a hierarchical order on an enriched set of values.
+<b>(a) Top: the image. Bottom: set of 9 values. (b) Top: the co-occurrence matrix of the image. Bottom: the set is endowed with an adjacency. (c) Binary partition tree as a hierarchical order on an enriched set of values.</b>
 
 <img src="figs/mct_fig6.png"  />
 
-The produced MCT using the proposed algorithm.
+<b>The produced MCT using the proposed algorithm.</b>
+
 Each node is described by:
 
 - l: the unique identifier of the node
