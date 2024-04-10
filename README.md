@@ -6,6 +6,7 @@ Two examples are presented here :
 
 - <a href="#example1">MCT from the image of <b> Figure 1 </b></a>
 - <a href="#example2">MCT from the image of <b> Figure 6 </b></a>
+  - using <a href="https://github.com/jimmy-randrianasoa/Example_BinaryPartitionTree_ValueSet.git" target="_blank">Example_BinaryPartitionTree_ValueSet</a>
 
 ## Installation
 
