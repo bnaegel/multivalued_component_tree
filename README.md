@@ -2,13 +2,18 @@
 
 This repository contains the code for the paper *New algorithms for multivalued component-trees* by Nicolas Passat, Romain Perrin, Jimmy Francky Randrianasoa, Camille Kurtz, and Benoît Naegel. 
 
+Two examples are presented here :
+
+- <a href="#example1">MCT from the image of <b> Figure 1 </b></a>
+- <a href="#example2">MCT from the image of <b> Figure 6 </b></a>
+
 ## Installation
 
 The code is written in Python and requires the following libraries:
 - numpy
 - pydot
 
-## MCT from the image of Figure 1
+## MCT from the image of Figure 1 <a id="example1"></a>
 
 ### Usage
 
@@ -50,7 +55,7 @@ Each node is described by:
     - 7: h
     - 8: i
 
-## MCT from the image of Figure 6
+## MCT from the image of Figure 6 <a id="example2"></a>
 
 ### Usage
 
